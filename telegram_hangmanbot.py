@@ -137,10 +137,11 @@ async def button(update: Update, context: ContextTypes.DEFAULT_TYPE):
         )
 
 if __name__ == "__main__":
-    app = ApplicationBuilder().token("8472508823:AAGcJPWK9PuUt0bZktBKY8MaC42OT1AJrrQ").build()
+    app = ApplicationBuilder().token("BOT_TOKEN").build()
 
     app.add_handler(CommandHandler("play", start))
     app.add_handler(CallbackQueryHandler(button))
 
     print("Bot is running...")
     app.run_polling()
+

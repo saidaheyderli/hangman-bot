@@ -1,6 +1,9 @@
 from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import ApplicationBuilder, CommandHandler, CallbackQueryHandler, ContextTypes
 import random
+import os
+TOKEN = os.getenv("BOT_TOKEN")
+
 
 # Word list
 WORDS = ["QAYMAG", "BERBAT", "JET", "MAMMADALI", "GAME", "KIWI", "IDEAL", "PIZZA", "BURGER", "BATMAN", "SPRITE", "ELON MUSK"]
@@ -144,4 +147,5 @@ if __name__ == "__main__":
 
     print("Bot is running...")
     app.run_polling()
+
 
